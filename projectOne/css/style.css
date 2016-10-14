@@ -1,13 +1,23 @@
-h2{
-    color:crimson;
+h2 {
+    color: crimson;
 }
-table,th,td{
+
+table,
+th,
+td {
     border: 1px solid red;
     padding: 5px 10px;
     border-collapse: collapse;
 }
-a{
+
+a {
     text-decoration: none;
     color: dodgerblue;
-    
+    border-right: 1px solid;
+    padding: 0 5px;
+    ;
+}
+
+a:last-child {
+    border-right: none;
 }
