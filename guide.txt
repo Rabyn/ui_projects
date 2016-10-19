@@ -1,0 +1,7 @@
+Node Package Manager(NPM) / Bower
+
+Download node js
+Then in your project folder go to cmd.
+In cmd prompt type - npm init // install package.js in your project folder
+		   - npm install -- save bootstrap3 // install and save bootstrap in your dependencies
+		   - npm install jquery //install jquery in your project folder --save- dev dependencies - only for development
