@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap3/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/contact.css">
+
+    <title>Contact Info </title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="tabs">
+                <ul>
+                    <li><a href="#formTab">Add Contact</a></li>
+                    <li><a href="#resultTab" id="resultId">List Contact</a></li>
+                </ul>
+                <div id="formTab">
+                    <div class="alert alert-success" role="alert">Record Successfully added.</div>
+                    <div class="alert alert-danger" role="alert">Oops! Record could not be added. Please correct you info.</div>
+                    <form action="" class="form-horizontal" id="userInfo">
+                        <div class="form-group">
+                            <label for="firstname" class="col-sm-2 control-label">Firstname</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Enter first name">
+                                <span class="error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-2 control-label">Lastname</label>
+                            <div class="col-md-6">
+                                <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Enter Lastname">
+                                <span class="error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dob" class="col-sm-2 control-label">Date of Birth</label>
+
+                            <div class="col-md-6">
+                                <input type="text" name="dob" class="form-control" id="dob" placeholder="Enter DOB">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country" class="col-sm-2 control-label">Country</label>
+                            <div class="col-md-6">
+                                <select name="country" id="country" class="form-control">
+                                    <option value="">Select a country</option>
+                                    <option value="afg">Afganistan</option>
+                                    <option value="np">Nepal</option>
+                                    <option value="us">United State</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender" class="col-sm-2 control-label">Gender</label>
+                            <div class="col-md-6">
+                                <label class="radio-inline">
+                                    <input type="radio" id="gender" name="gender" value="male">Male
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="gender" name="gender" value="female">Female
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="gender" name="gender" value="other">Other
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cars" class="col-sm-2 control-label">Cars</label>
+                            <div class="col-md-6">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="car" value="toyota">Toyota
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="car" value="hyundai">Hyundai
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="car" value="bmw">BMW
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-6">
+                            <button id="submit" type="submit" class="btn btn-danger">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="resultTab"></div>
+            </div>
+
+        </div>
+    </div>
+    <div id="dialog" title="Sample Form">
+        <form action="">
+            Firstname
+            <input type="text" name="dialogFirstname" id="dialogFirstname">
+            <br> Lastname
+            <input type="text" name="dialoglastname" id="dialogLastname">
+            <br>
+            <button type="submit" id="openForm" class="btn btn-warning">Submit</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/node_modules/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="/scripts/contact.js"></script>
+
+</body>
+
+</html>
