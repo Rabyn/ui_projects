@@ -101,16 +101,18 @@
 
         </div>
     </div>
+    <!-- Dialogue box goes here -->
     <div id="dialog" title="Sample Form">
-        <form action="">
-            Firstname
+        <form action="" class="form-horizontal">
+            <input type="hidden" name="dialogID" id="dialogID"> Firstname
             <input type="text" name="dialogFirstname" id="dialogFirstname">
             <br> Lastname
             <input type="text" name="dialoglastname" id="dialogLastname">
             <br>
-            <button type="submit" id="openForm" class="btn btn-warning">Submit</button>
+            <button type="button" id="editForm" class="btn btn-warning">Submit</button>
         </form>
     </div>
+
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="/node_modules/jquery-ui/jquery-ui.js"></script>
     <script type="text/javascript" src="/scripts/contact.js"></script>

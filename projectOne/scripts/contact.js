@@ -75,6 +75,10 @@ $(document).ready(function () {
             duration: 1000
         }
     });
+
+    $("#editForm").click(function () {
+        editForm();
+    });
 });
 
 
@@ -167,6 +171,53 @@ function submit() {
 
 } //end of submit
 
+function editForm() {
+
+    var personObjNew = new Person();
+
+    var pos = $("#dialogID").val();
+    var newFname = $("#dialogFirstname").val();
+    var newlname = $("#dialogLastname").val();
+
+    var error = 0;
+    var regExNew = new RegExp('^([a-z]|[A-Z])([a-z]|[A-Z]|[1-9])*$', 'g');
+
+    if (newFname == "" || newFname.match(regExNew) == null) {
+        error++;
+
+    } else {
+
+    }
+    if (newlname == "" || newlname.match(regExNew) == null) {
+        error++;
+
+    } else {
+
+    }
+    if (error == 0) {
+
+        personObjNew.setFirstName(newFname);
+        personObjNew.setLastName(newlname);
+
+        personArray[pos] = personObjNew;
+        $("#dialog").dialog("close");
+        display();
+        /*personObj.setDob(dob);
+        personObj.setGender(gender);
+        personObj.setCountry(country);
+        personObj.setCars(carsArray);
+
+        personArray.push(personObj);
+
+        $('#userInfo')[0].reset();
+        $(".alert-danger").hide();
+        $(".alert-success").show();*/
+
+    } else {
+        $(".alert-success").hide();
+        $(".alert-danger").show();
+    }
+}
 // Output Format
 function generateTable(sample) {
 
@@ -204,6 +255,7 @@ function display() {
 
         var pos = $(this).attr("position");
 
+        $("#dialogID").val(pos);
         $("#dialogFirstname").val(personArray[pos].getFirstName());
         $("#dialogLastname").val(personArray[pos].getLastName());
 
